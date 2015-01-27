@@ -1,0 +1,40 @@
+
+
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+
+              
+            	<div class="inner cover" style="padding-top: 11em;">
+
+            	</div>
+
+                <div class="inner cover">
+
+            		<% @articles.each do |article| %>
+            		<h1><%= link_to article.title , article_path(article) , style: "color:white;"%></h1>
+            		<p style="color: #851CD2;">&#9;<%= article.content.truncate(27)%></p>
+            		<%= link_to "Edit" , edit_article_path(article) %>
+            		<% end %>
+
+                </div>
+
+                <div class="inner cover"  style="padding-bottom: 5em;">
+
+            	</div>
+
+
+            </div>
+
+           
+            
+        </div>
+
+    </div>
+
+</div>
