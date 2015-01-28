@@ -1,0 +1,50 @@
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+
+              
+            	<div class="inner cover" style="padding-top: 8em;">
+
+            	</div>
+
+                <div class="inner cover">
+
+            		<h2>Sign up</h2>
+
+                    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <%= f.error_notification %>
+
+                      <div class="form-inputs">
+                        <%= f.input :email, required: true, autofocus: true %>
+                        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
+                        <%= f.input :password_confirmation, required: true %>
+                      </div>
+
+                      <div class="form-actions">
+                        <%= f.button :submit, "Sign up" %>
+                      </div>
+                    <% end %>
+
+                    <%= render "devise/shared/links" %>
+
+                </div>
+
+                <div class="inner cover"  style="padding-bottom: 5em;">
+
+            	</div>
+
+
+            </div>
+
+           
+            
+        </div>
+
+    </div>
+
+</div>
