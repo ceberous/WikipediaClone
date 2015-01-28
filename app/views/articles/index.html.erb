@@ -1,6 +1,4 @@
 
-
-
 <div class="site-wrapper">
 
     <div class="site-wrapper-inner">
@@ -9,8 +7,17 @@
 
             <div class="masthead clearfix">
 
+
               
-            	<div class="inner cover" style="padding-top: 11em;">
+            	<div class="inner cover" style="padding-top:.5em;">
+                    
+                    <div class="img img-responsive">
+                        <%= image_tag 'logo.png' , height: "50%" , width: "50%" %>    
+                    </div>
+            
+                    <% if @category.present? %>
+                        <h4 style="color: #FFF621;"><%= @category.name %></h4>
+                    <% end %>
 
             	</div>
 

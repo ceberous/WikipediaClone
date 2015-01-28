@@ -1,15 +1,47 @@
-<h2>Log in</h2>
+<div class="site-wrapper">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+    <div class="site-wrapper-inner">
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+        <div class="cover-container">
 
-<%= render "devise/shared/links" %>
+            <div class="masthead clearfix">
+
+              
+            	<div class="inner cover" style="padding-top: 8em;">
+
+            	</div>
+
+                <div class="inner cover">
+
+            		<h2>Log in</h2>
+
+                    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                      <div class="form-inputs">
+                        <%= f.input :email, required: false, autofocus: true %>
+                        <%= f.input :password, required: false %>
+                        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                      </div>
+
+                      <div class="form-actions">
+                        <%= f.button :submit, "Log in" %>
+                      </div>
+                    <% end %>
+
+                    <%= render "devise/shared/links" %>
+
+                </div>
+
+                <div class="inner cover"  style="padding-bottom: 5em;">
+
+            	</div>
+
+
+            </div>
+
+           
+            
+        </div>
+
+    </div>
+
+</div>
